@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestra Historia 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fffafc;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #f7d9e3, #fce4ec);
+      padding: 60px 30px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      color: #c2185b;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .timeline {
+      background: #f9f9f9;
+      padding: 40px 20px;
+    }
+    .timeline h2 {
+      text-align: center;
+      color: #ad1457;
+      margin-bottom: 40px;
+    }
+    .event {
+      margin: 30px auto;
+      max-width: 700px;
+      padding: 20px;
+      border-left: 4px solid #c2185b;
+      background: #fff;
+      border-radius: 8px;
+    }
+    .event h3 {
+      margin-top: 0;
+      color: #880e4f;
+    }
+
+    .messages-section {
+      background: #fce4ec;
+      padding: 50px 20px;
+    }
+    .messages-section h2 {
+      color: #c2185b;
+      text-align: center;
+    }
+    .captures {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+    .captures img {
+      max-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .love-letter {
+      max-width: 700px;
+      margin: 50px auto;
+      background: #fff0f5;
+      padding: 30px;
+      border-radius: 20px;
+      border: 2px solid #ec407a;
+      font-family: 'Georgia', serif;
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #6a1b9a;
+    }
+
+    .favorite-moments {
+      padding: 50px 20px;
+      background: #fff5f8;
+    }
+    .favorite-moments h2 {
+      text-align: center;
+      color: #c2185b;
+    }
+    .moment {
+      margin: 20px auto;
+      max-width: 600px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 1.1em;
+    }
+
+    .sorpresa, .regalo {
+      padding: 60px 20px;
+      text-align: center;
+      background: #f8bbd0;
+      margin-top: 40px;
+    }
+    .sorpresa button, .regalo button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background: #d81b60;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .dedicatoria {
+        background-color: #fff0f5;
+    border: 2px solid #ffb6c1;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #5c4a4a;
+    box-shadow: 0 4px 8px rgba(255, 182, 193, 0.3);
+    }
+  .contador-amor {
+    background-color: #fff5e6;
+    padding: 20px;
+    margin: 30px auto;
+    text-align: center;
+    border: 2px dashed #ff6b81;
+    border-radius: 15px;
+    max-width: 400px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .contador-amor h3 {
+  font-size: 24px;
+  color: #ff6b81;
+  margin-bottom: 10px;
+  }
+
+#contador {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+.final-magico {
+  padding: 60px 30px;
+  background: linear-gradient(to right, #fff0f5, #ffe6f7);
+  text-align: center;
+  font-family: 'Georgia', cursive;
+  color: #b30059;
+  border-top: 3px dashed #ffaacc;
+}
+
+#mostrarMensaje {
+  background-color: #ff99cc;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#mostrarMensaje:hover {
+  background-color: #ff66aa;
+}
+
+#mensajeFinal {
+  margin-top: 30px;
+  font-size: 1.4em;
+  white-space: pre-wrap;
+  text-align: center;
+}
+
+.oculto {
+  display: none;
+}
+.peluches {
+    background: #fce4ec;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.peluches h2 {
+    color: #c2185b;
+    margin-bottom: 20px;
+}
+
+.peluches-lista {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.peluche {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.peluche img {
+    margin-top: 15px;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.contenedor {
+  text-align: center;
+}
+
+#frase {
+  background: #ffe4e1;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 2px solid #ffb6c1;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  color: #d6336c;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#botonfrase {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s;
+}
+
+#botonfrase:hover {
+  background-color: #ff85c1;
+}
+
+#playlistSection {
+  position: relative;
+  padding: 100px 20px;
+  background: #ffdde1; /* color de respaldo */
+  overflow: hidden;
+}
+
+/* Fondo de corazones animados */
+#playlistSection::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url("https://i.imgur.com/9BU5ZPZ.png"); /* Corazones pequeños */
+  background-size: 80px;
+  background-repeat: repeat;
+  opacity: 0.2;
+  animation: corazones 60s linear infinite;
+  z-index: 0;
+}
+
+/* Contenido con efecto glass */
+.playlist-visual {
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  animation: fadeInUp 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.playlist-visual h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.playlist-visual p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+  font-style: italic;
+  color: #ffeaff;
+}
+
+/* Botón con latido */
+.boton-playlist {
+  display: inline-block;
+  padding: 14px 34px;
+  background-color: #ff4081;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05em;
+  border-radius: 40px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background 0.3s;
+  animation: heartbeat 2s infinite;
+}
+
+.boton-playlist:hover {
+  background-color: #ff669a;
+  transform: scale(1.08);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes corazones {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+.playlist-visual p {
+  color: #222222;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.7); 
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+.portada-playlist {
+  width: 180px;
+  height: 180px;
+  border-radius: 25px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portada-playlist:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.album-viajes {
+  padding: 60px 20px;
+  background: url('https://i.imgur.com/y7msW4x.png'); /* fondo de sellos de pasaporte */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+
+.album-viajes h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  color: #540b0e;
+  text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+}
+
+.album-viajes .contador {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.grid-paises {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pais {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pais img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.pais.visited img {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+.pais span {
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+.upload {
+  display: block;
+  background: #ffccd5;
+  padding: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #721c24;
+  font-weight: bold;
+  margin: 8px auto 12px;
+  border-radius: 10px;
+  max-width: 80%;
+  transition: background 0.3s;
+}
+
+.upload:hover {
+  background: #faa2c1;
+}
+
+.upload input {
+  display: none;
+}
+.show-popup-button {
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      background-color: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .show-popup-button:hover {
+      background-color: #e63946;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      display: none; /* Oculto por defecto */
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 90%;
+      width: 400px;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-content h2 {
+      color: #e63946;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .modal-content p {
+      font-size: 1.1rem;
+      color: #333;
+      margin: 0.5rem 0;
+    }
+
+    .danger-sign {
+      font-size: 2rem;
+      color: #e63946;
+      margin-bottom: 0.5rem;
+    }
+
+    .confirm-button {
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .confirm-button:hover {
+      background-color: #d62839;
+    }
+
+    .centro-boton {
+    text-align: center;
+    margin-top: 2rem; /* opcional */
+    }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Nuestra Historia de Amor 💕</h1>
+    <p>Desde el primer momento en que te conocí, supe que había algo especial entre nosotros. Esta página es un regalo para vos, para que recuerdes todo lo que vivimos, lo que sentimos, y lo que seguimos construyendo día a día. Y quiero que siempre tengas esto para revivir nuestra historia 💖</p>
+    <img src="imgs/clayma.jpg" alt="Nosotros" style="width: 100%; max-width: 600px; border-radius: 20px; margin-top: 20px;" />
+  </header>
+
+  <section class="timeline">
+    <div class="dedicatoria">
+    <p>Lo mio no son las manualidades claramente, y por eso en estos dias que aprendi en la facultad pude armarte esto, al principio te lo iba a mostrar un dia asi de la nada pero preferi que sea en una ocasion un poco mas especial.</p>
+</div>
+    <h2>Línea de Tiempo de Nuestro Amor ⏳</h2>
+    <div class="event">
+        <h3>🎉 Joda 24 de Marzo</h3>
+        <p>Nos conocimos en la joda que organice con los chicos, como me viniste a chamuyar ese dia, terrible!!!!
+        Despues de esto nos pusimos a hablar, puede ser que borre algun que otro mensaje, al final tenias razon sobre que no me daba. Y despues de esto hablamos alguna que otra vez mas
+        </p>
+      </div>
+    <div class="event">
+      <h3>📅 Primera Salida</h3>
+      <p> El 11 de junio de 2024 salimos por primera vez, fuimos a ayulem, fue solo un rato porque yo tenia ingles
+        pero igual la pase re lindo, me soprendio la persona que eras, porque como te dije tenia otra mirada de vos y como eras en realidad, menos mal que te segui conociendo porque no me hubiese perdonado nunca la persona que me perderia
+      </p>
+    </div>
+    <div class="event">
+        <h3>❄️ Bariloche</h3>
+        <p>BARILOCHE, que decir de este viaje movidito... La pase hermoso con vos fue lo que mas nos acerco e hizo que nos enamoremos tanto y yo me de cuenta que estaba loco por vos, pasaban muchas cosas, algunas no muy lindas y otras que me voy a acordar para siempre
+        </p>
+      </div>
+    <div class="event">
+      <h3>💕 Queres ser mi novia?</h3>
+      <p>Pasaron los meses y nuestro amor iba creciendo mas y mas. Empezaste a integrarte en mi familia y como te dije en la carta el te quiero empezaba a quedarte chico y el te amo iba apareciendo, es por eso que el 15 de septiemrbe de 2024 nos pusimos oficialmente de novios.</p>
+    </div>
+    <div class="event">
+      <h3>🚍 Viaje a Rosario</h3>
+      <p>Medio asi de un momento para el otro, me tocaba a mi conocer a tu familia, asi que nos fuimos derecho para Rosario, despues de mi fiesta de egresados, el 25 de Octubre de 2024, hicimos nuestro primer mini viaje y que increible que fue, conoci a tu familia y ademas pasamos unos dias hermosos</p>
+    </div>
+    <div class="event">
+        <h3>🏥Mi operacion</h3>
+        <p>4 meses despues, pasaron tantas cosas que esta linea de tiempo no termina mas, pero que obvio que vamos a seguir armandola juntos<br>
+        El 21 de frebreo de 2025 me opere, y como nos acerco esto, aunque tuve un momento que no estuve para vos, y siempre me lamento, fue increible como estuviste ahi siempre, desde el minuto 1. Me acompañaste en mis bajones y en todo momento</p>
+      </div>
+    
+  </section>
+
+  <section>  
+    <div class="contador-amor">
+    <h3>Tiempo que llevamos juntos 💞</h3>
+    <p id="contador"></p>
+  </div>
+</section>
+
+<section class="peluches">
+  <h2>👶 Nuestros Hijos  🧸</h2>
+  <p>Estos son nuestros  "hijos" por ahora, que aunque no los vea. Se que te hacen acordar a mi cuando no dormimos juntos:</p>
+  <div class="peluches-lista">
+      <div class="peluche">
+          <h3>🧸 Walter</h3>
+          <p>Fue el primero de todos, te lo regale el dia que nos pusimos de novios, por eso es tan especial</p>
+          <img src="imgs/Peluche1.png" alt="Peluche 1" style="width: 250px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
+      </div>
+      <div class="peluche">
+          <h3>🧸 Chanchi</h3>
+          <p>No me acordaba el nombre al principio, y en el fondo sabemos que perdio contra los otros, pero el que no perdio fui yo el dia que te lo regale, en uno de nuestros aniversarios</p>
+          <img src="imgs/Peluche2.png" alt="Peluche 2" style="width: 250px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
+      </div>
+      <div class="peluche">
+        <h3>🧸 Igor</h3>
+        <p>Este es Estado Unidense, y tu favorito claramente, menos mal que yo nunca voy a tener favoritismo</p>
+        <img src="imgs/Peluche3.png" alt="Peluche 2" style="width: 250px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.2);" />
+    </div>
+  </div>
+</section>
+
+  <section class="messages-section">
+    <h2>💬 Mis Mensajes favoritos</h2>
+    <div class="captures">
+      <img src="imgs/chat1.jpg" alt="Mensaje 1" />
+      <img src="imgs/Chat2.jpg" alt="Mensaje 2" />
+      <img src="imgs/Chat3.jpg" alt="Mensaje 3" />
+    </div>
+
+
+
+    <div class="love-letter">
+      <h3>Mi Primer Carta 💌</h3>
+      <p>Bueno, ya te conté de donde empezó esto. Cuando ya no leía o tenía que hacer tiempo, empecé a escribir para ver cómo me sentía, y aunque no paro de hablar, cuando es algo que me obliga a abrirme, me cuesta un poco más. Por eso, muchas veces capaz no te demueste tanto las cosas que siento. No sé, no soy así, no seré tan romántico ?? (aunque no sé porque de la nada me salió decirte te quiero cuando habíamos salido 3 veces), pero espero que con esto te des cuenta lo mucho que me gustas y que me gusta estar con vos.
+
+        Primero, agradeciéndote por ser esa persona con la que me junto y hace olvidarme de los problemas que tengo. Haciendo que me olvide de todo, desde las personas que extraño, hasta de todos los comentarios de mierda que dicen sobre nosotros. Además, de que haces que me ponga contento cada vez que hablamos antes de irnos a dormir, o solo cuando salis de la cueva y te veo un rato en el recreo. Posta, me siento diferente, dándome cuenta de que es con vos. Siento que realmente sos la persona que busco, y eso me gusta. Y aunque al principio nos costó por toda la situación, la tranquilidad que me da verte y contarte mis cosas no me pasó con nadie. Esa semana de bariloche hablamos un montón de cosas. 
+        
+        Después pedirte perdón por las veces que llego a ser molesto con que no te abrís tanto conmigo y que no me contas muchas cosas, te lo digo tantas veces pero porque me importas. Me importan tus problemas, cómo estás, o también en cómo te puedo ayudar a que te salgan las cosas y puedas contarme cualquier cosa que te pase. Más de una vez me dejas pensando en qué mierda me querías decir cuando estás por arrancar a decirme algo y me decís: No, nada, nada.
+        
+        La verdad, ya sé que no sabemos qué va a pasar, de si te vas o no. Te juro que aunque me dijiste que disfrute ahora, cada día pienso un poco en eso. Pero sabé que siempre vas a tener a alguien que te va a acompañar y te va a escuchar donde sea que estes (ojalá te quedes y sea acá). En cualquier momento, sea bueno o malo, y siempre admirándote como desde el primer día que salimos, cuando pensaba que ibas a ser media burra y que terminaste siendo una traga de mierda. Pero igual, me hace reír porque cuando te va bien, es obvio que me gusta verte contenta , y cuando no, además de reírme de vos, también me gusta estar ahí para que te des cuenta de que tener DOS BAJAS es terrible. No, mentira, pero para darte cuenta de que sos una exagerada y después lo vas a aprobar.
+        
+        Última cosa, porque ya es eterno sino: todavía nos quedan un montón de cosas por hacer juntos y seguir conociéndonos. Así que, por eso, te digo que siempre confíes en mí, porque aunque haya sido medio raro al principio, me gustas un montón. Y que si hay algo que no te gusta o te ponga incómoda, me lo digas y no te quedes a la mitad como haces siempre.
+        
+        Te quiero un montón. 
+        
+        Me jodes por esto después de que te lo muestre y te mato.</p>
+      <p>Mate ♥</p>
+    </div>
+  </section>
+
+  <div class="contenedor">
+    <div id="frase">Tocá el botón para ver una frase</div>
+    <button id="botonfrase" onclick="mostrarFrase()">Mostrar frase</button>
+  </div>
+
+  <section class="favorite-moments">
+    <h2>🌟 Momentos Favoritos</h2>
+    <div class="moment">🎂 El cumpleaños de 15 de Martu que bailamos juntos.</div>
+    <div class="moment">👩‍👦 El día que después de tanto conocí a tu mamá.</div>
+    <div class="moment">🌙La noche que por primera vez estuvimos juntos.</div>
+    <div class="moment">🎓 Nuestras fiestas de egresados.</div>
+    <div class="moment">🌊 Nuestro mini viaje en Mardel y el dia en Villa Gesell.</div>
+    <div class="moment">🎬 Las películas que nunca terminamos de ver, porque nos ponemos a hacer otras cosas...</div>
+    <div class="moment">🏡 Los día a día con mi familia.</div>
+    <div class="moment"> 🧒 Cuando tus hermanos me pusieron Matute.</div>
+
+  </section>
+
+  <section id="playlistSection">
+    <div class="playlist-visual">
+      <img src="imgs/spoti.jpg" Portada de la playlist class="portada-playlist" />
+      <h2>Nuestra playlist 💖</h2>
+      <p>Un lugar donde vamos a ir poniendo las canciones que nos haga acordar al otro...</p>
+      <a href="https://open.spotify.com/playlist/3CkPOAGJjwmKTyPQq74I1S?si=ee8d58fc0a7f492b&pt=06b847cbaddfce153ed57aff80c46a2a" target="_blank" class="boton-playlist">
+        🎧 Escuchar en Spotify
+      </a>
+    </div>
+  </section>
+
+  <section class="future-plans" style="background-color: #e0f7fa; padding: 40px;">
+    <h2 style="text-align: center; color: #00796b;">Nuestros Planes ✈️💑</h2>
+  
+    <div style="max-width: 800px; margin: auto; display: flex; flex-direction: column; gap: 20px;">
+      
+      <!-- Plan individual -->
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>🏠 Tener nuestra primera noche viendo pelis en un depto solo nuestro</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>🎄 Pasar una Navidad juntos con nuestras familias</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>🐶 Adoptar un perrito</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>👨‍👩‍👧‍👦 Formar la familia que tanto imaginamos</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>🌍 Recorrer el mundo, juntos</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>✈️ Irnos de viaje juntos por primera vez... ¿Brasil dentro de poco como suena...?</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>💃🕺 Aprender Salsa juntos</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>💍 Casarnos</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+      <div class="plan-item" style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <span>🚀 Acompañarnos en todos nuestros proyectos</span>
+        <div>
+          <input type="date" onchange="mostrarFecha(this)" style="padding: 5px;">
+          <span class="fecha-mostrada" style="margin-left: 10px; color: #00796b;"></span>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <section class="album-viajes">
+    <h2>¿Estás lista para completar este álbum? 🌍📸</h2>
+    <p class="contador">
+      Países visitados: <span id="contador">0</span> / 60
+      <button id="sumarExtra" title="Sumar país extra">+</button>
+    </p>
+  
+    <div class="grid-paises">
+      <!-- Italia -->
+      <div class="pais" onclick="marcarVisitado(this)">
+        <img src="https://flagcdn.com/w320/it.png" alt="Italia">
+        <span>Italia</span>
+        <label class="upload">
+          Subí nuestra foto
+          <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+        </label>
+      </div>
+  
+      <!-- México -->
+      <div class="pais" onclick="marcarVisitado(this)">
+        <img src="https://flagcdn.com/w320/mx.png" alt="México">
+        <span>México</span>
+        <label class="upload">
+          Subí nuestra foto
+          <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+        </label>
+      </div>
+  
+      <!-- Francia -->
+      <div class="pais" onclick="marcarVisitado(this)">
+        <img src="https://flagcdn.com/w320/fr.png" alt="Francia">
+        <span>Francia</span>
+        <label class="upload">
+          Subí nuestra foto
+          <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+        </label>
+      </div>
+  
+      <!-- Estados Unidos -->
+      <div class="pais" onclick="marcarVisitado(this)">
+        <img src="https://flagcdn.com/w320/us.png" alt="Estados Unidos">
+        <span>Estados Unidos</span>
+        <label class="upload">
+          Subí nuestra foto
+          <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+        </label>
+      </div>
+  
+      <!-- España -->
+      <div class="pais" onclick="marcarVisitado(this)">
+        <img src="https://flagcdn.com/w320/es.png" alt="España">
+        <span>España</span>
+        <label class="upload">
+          Subí nuestra foto
+          <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+        </label>
+      </div>
+  
+      <!-- Japón -->
+      <div class="pais" onclick="marcarVisitado(this)">
+        <img src="https://flagcdn.com/w320/jp.png" alt="Japón">
+        <span>Japón</span>
+        <label class="upload">
+          Subí nuestra foto
+          <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+        </label>
+      </div>
+  
+      <!-- Inglaterra -->
+      <div class="pais" onclick="marcarVisitado(this)">
+        <img src="https://flagcdn.com/w320/gb.png" alt="Inglaterra">
+        <span>Inglaterra</span>
+        <label class="upload">
+          Subí nuestra foto
+          <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+        </label>
+      </div>
+  
+      <!-- Brasil -->
+      <div class="pais" onclick="marcarVisitado(this)">
+        <img src="https://flagcdn.com/w320/br.png" alt="Brasil">
+        <span>Brasil</span>
+        <label class="upload">
+          Subí nuestra foto
+          <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+        </label>
+      </div>
+
+      <!-- Puerto Rico -->
+<div class="pais" onclick="marcarVisitado(this)">
+  <img src="https://flagcdn.com/w320/pr.png" alt="Puerto Rico">
+  <span>Puerto Rico</span>
+  <label class="upload">
+    Subí nuestra foto
+    <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+  </label>
+</div>
+
+<!-- Grecia -->
+<div class="pais" onclick="marcarVisitado(this)">
+  <img src="https://flagcdn.com/w320/gr.png" alt="Grecia">
+  <span>Grecia</span>
+  <label class="upload">
+    Subí nuestra foto
+    <input type="file" accept="image/*" onchange="mostrarFoto(this)">
+  </label>
+</div>
+    </div>
+  </section>
+
+  <section class="sorpresa">
+    <h2>🎁 Sorpresa</h2>
+    <p>Esta sorpresa no la puede usar cualquiera, ni mucho menos leerla por eso necesitas poner la contraseña para desbloquearla:</p>
+    <p>PISTA: Uno de los apodos que te puse</p>
+    <input type="password" id="passwordInput" placeholder="Contraseña secreta">
+    <button onclick="verificarContrasena()">Vale por...</button>
+    <p id="mensaje" style="color: red;"></p>
+  </section>
+
+  <div class="centro-boton">
+    <button class="show-popup-button" onclick="mostrarPopup()">Click ACA para ganarte un beso</button>
+  </div>
+
+  <div class="modal-overlay" id="popup">
+    <div class="modal-content">
+      <div class="danger-sign">⚠️</div>
+      <h2>¡Atención!</h2>
+      <p>Se va a venir nuevas sorpresas...</p>
+      <p>Hoy a la mañana, en ña puerta de tu casa.</p>
+      <p>Hoy a la tarde, en mi casa.</p>
+      <p>Y el 3 de mayo a las 17:30...</p>
+      <p><strong>¡Nos tenemos que vestir lindos y tener imaginacion!</strong></p>
+      <button class="confirm-button" onclick="cerrarPopup()">Confirmar asistencia</button>
+    </div>
+  </div>
+
+  <section class="regalo">
+    <h2>🎀 Regalo Oculto</h2>
+    <p>Si queres conseguir nuevos regalos click aca:</p>
+    <a href="Novia.pdf" target="_blank">
+        <button>Examen Sorpresa</button>
+      </a>  
+    </section>
+
+    <footer class="final-magico">
+      <div class="texto-final">
+        <button id="mostrarMensaje">Ver Fin del regalo</button>
+        <p id="mensajeFinal" class="oculto"></p>
+      </div>
+    </footer>
+
+  <script>
+    function actualizarContador() {
+      const inicio = new Date('2024-09-15T00:00:00');
+      const ahora = new Date();
+      const diff = ahora - inicio;
+  
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+  
+      document.getElementById("contador").textContent = 
+        `${dias} días, ${horas} horas, ${minutos} minutos y ${segundos} segundos 💖`;
+    }
+  
+    actualizarContador();
+    setInterval(actualizarContador, 1000);
+  </script>
+
+<script>
+  function verificarContrasena() {
+    const password = document.getElementById("passwordInput").value;
+    const mensaje = document.getElementById("mensaje");
+
+    if (password === "Claripuchi") {
+      // Redirige al archivo PDF (o lo abre en nueva pestaña)
+      window.open("Cupones.pdf", "_blank");
+      mensaje.textContent = "";
+    } else {
+      mensaje.textContent = "Contraseña incorrecta. Intentá de nuevo ❤️";
+    }
+  }
+</script>
+<script>
+  const mensaje = `Este regalo en realidad no tiene final…
+Porque esto recién esta empezando.
+Nos espera una vida llena de cosas por descubrir, y mil historias por escribir....
+y un montón de experiencias nuevas que vamos a vivir juntos.
+
+Sigamos construyendo esto, día a día, con mucho amor, como venimos haciendo.
+
+Siempre, Mate 💌
+…continuará
+`;
+
+  const boton = document.getElementById('mostrarMensaje');
+  const parrafo = document.getElementById('mensajeFinal');
+
+  boton.addEventListener('click', () => {
+    boton.style.display = 'none';
+    parrafo.classList.remove('oculto');
+    escribirTexto(mensaje, parrafo);
+  });
+
+  function escribirTexto(texto, elemento) {
+    let i = 0;
+    const velocidad = 40; // velocidad de tipeo
+
+    function escribir() {
+      if (i < texto.length) {
+        elemento.textContent += texto.charAt(i);
+        i++;
+        setTimeout(escribir, velocidad);
+      }
+    }
+
+    escribir();
+  }
+</script>
+<script>
+  const frases = [
+    "Amar es elegirte todos los días, sin dudarlo.",
+    "Tu sonrisa es mi lugar favorito.",
+    "Con vos, todo es mejor.",
+    "Sos mi calma en medio del caos.",
+    "Me enamorás incluso cuando no hacés nada.",
+    "Gracias por existir justo cuando más te necesitaba.",
+    "Te volvería a elegir en todas mis vidas.",
+    "Sos mi parte favorita de todos los días.",
+    "Que el tiempo pase, pero que sea con vos.",
+    "No sabía lo que era el amor hasta que te conocí.",
+    "Tu amor es mi refugio.",
+    "Estás en todos mis planes, incluso los que todavía no pensé.",
+    "Me gustás más que dormir hasta tarde.",
+    "Con vos, los silencios también se disfrutan.",
+    "Tu risa es mi sonido favorito.",
+    "El mundo es menos gris desde que estás en él.",
+    "Amarte no fue una elección, fue algo natural.",
+    "Mi hogar no es un lugar, es una persona. Sos vos.",
+    "Te amo en todos los idiomas y en todos los tiempos verbales.",
+    "Me hacés creer en la magia.",
+    "Si esto no es amor, entonces no sé qué es.",
+    "Sos mi lugar seguro.",
+    "Me enamorás cada vez que me mirás.",
+    "Te pienso en todos los momentos felices.",
+    "Gracias por hacerme sentir tan amado/a.",
+    "Sos mi sueño hecho persona.",
+    "Mi mejor versión aparece cuando estoy con vos.",
+    "No hay nadie más con quien quisiera estar.",
+    "Te quiero sin prisa, pero sin pausa.",
+    "Te elegí antes de saber que existías.",
+    "Cada día contigo es un regalo.",
+    "Me hacés sentir en casa con solo abrazarme.",
+    "Sos el milagro más lindo que me pasó.",
+    "Todo es más fácil si estamos juntos.",
+    "Me hacés creer en el amor sin condiciones.",
+    "En vos encontré lo que no sabía que estaba buscando.",
+    "Sos mi historia favorita.",
+    "Cuando estoy con vos, el tiempo se detiene.",
+    "Tu amor me enseña a ser mejor.",
+    "No sos todo lo que soñé... sos mucho más.",
+    "Tu voz es mi melodía preferida.",
+    "Sos ese “para siempre” que nunca pensé encontrar.",
+    "Me hacés sentir amado/a de verdad.",
+    "Si el amor tiene forma, se parece a vos.",
+    "Quiero más domingos de peli y vos.",
+    "Me alcanzás con una mirada.",
+    "Con vos aprendí lo que es amar sin miedo.",
+    "Te amo en cada detalle.",
+    "Tu amor es mi paz.",
+    "Sos mi principio, mi medio y mi final feliz.",
+    "El mundo es un lugar mejor desde que estás en él.",
+    "No quiero un cuento, quiero nuestra historia real.",
+    "Tenés el poder de alegrarme el día con un simple mensaje.",
+    "Sos mi persona favorita, siempre.",
+    "Te pienso más de lo que te lo digo.",
+    "Sos el motivo de mis sonrisas más sinceras.",
+    "Si amar es un arte, vos sos mi obra maestra.",
+    "Te amo con todo lo que soy.",
+    "Sos ese “algo” que no sabía que me faltaba.",
+    "No hay distancia si el amor es verdadero.",
+    "Me haces sentir especial sin decir una palabra.",
+    "Sos mi casualidad más perfecta.",
+    "No importa el lugar, si estoy con vos.",
+    "Sos mi inspiración de cada día.",
+    "Te quiero incluso en tus días grises.",
+    "En tu abrazo está mi paz.",
+    "Sos lo más bonito que me pasó sin esperarlo.",
+    "El amor tiene tu nombre.",
+    "Con vos, los días nublados también tienen luz.",
+    "Sos mi mejor coincidencia.",
+    "Me haces creer que todo es posible.",
+    "Te amo por cómo me hacés sentir.",
+    "Sos mi compañía favorita.",
+    "Tu forma de quererme me salva.",
+    "No necesito promesas si tengo tus acciones.",
+    "Sos ese “te amo” que siempre soñé escuchar.",
+    "Tu amor me transforma.",
+    "Me gusta todo de vos, hasta lo que vos no ves.",
+    "Sos un pedacito de cielo en la Tierra.",
+    "Nunca me canso de decirte cuánto te quiero.",
+    "Si me pierdo, que sea en tus brazos.",
+    "Sos el mejor capítulo de mi vida.",
+    "Te pienso incluso cuando debería estar pensando en otra cosa.",
+    "El amor tiene tu olor, tu voz y tu risa.",
+    "Nunca supe lo que era la felicidad hasta que llegaste.",
+    "Sos la parte linda de mis días feos.",
+    "Con vos, aprendí que el amor no duele.",
+    "Sos ese “algo” que me hace bien.",
+    "Me encanta la vida si la vivo con vos.",
+    "Te llevo en mi mente, en mi corazón y en cada latido.",
+    "Sos mi primer pensamiento cada mañana.",
+    "Te amo con la fuerza de todo lo que siento.",
+    "Sos la paz que no sabía que necesitaba.",
+    "A tu lado, todo tiene sentido.",
+    "Te quiero así, sin razón y sin medida.",
+    "Sos el final feliz que no sabía que merecía.",
+    "Con vos, los días tienen otro color.",
+    "No sos un sueño, pero te soñé.",
+    "Gracias por tanto amor.",
+    "Lo mejor de mi vida empezó el día que te conocí."
+  ];
+
+
+  function mostrarFrase() {
+      const fraseElemento = document.getElementById("frase");
+      const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+      fraseElemento.textContent = fraseAleatoria;
+    }
+</script>
+
+<script>
+  let visitados = 0;
+
+  function marcarVisitado(elemento) {
+    if (!elemento.classList.contains('visited')) {
+      elemento.classList.add('visited');
+      visitados++;
+    } else {
+      elemento.classList.remove('visited');
+      visitados--;
+    }
+    document.getElementById("contador").textContent = visitados;
+  }
+
+  function mostrarFoto(input) {
+    const contenedor = input.closest(".pais");
+    const imgTag = contenedor.querySelector("img");
+
+    if (input.files && input.files[0]) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        imgTag.src = e.target.result;
+        contenedor.classList.add("visited");
+        if (!contenedor.classList.contains("visited-contado")) {
+          contenedor.classList.add("visited-contado");
+          visitados++;
+          document.getElementById("contador").textContent = visitados;
+        }
+      };
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+</script>
+
+<script>
+  function mostrarFecha(input) {
+    const span = input.nextElementSibling;
+    if (input.value) {
+      span.textContent = `📅 ${input.value}`;
+    } else {
+      span.textContent = '';
+    }
+  }
+</script>
+
+<script>
+  function mostrarPopup() {
+    document.getElementById("popup").style.display = "flex";
+  }
+
+  function cerrarPopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
